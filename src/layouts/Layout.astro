@@ -1,3 +1,8 @@
+---
+
+---
+
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,8 +11,36 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
+		<script>
+			// Este script se ejecutará en el cliente
+			document.addEventListener('DOMContentLoaded', () => {
+  			const navLinks = document.querySelectorAll('nav a');
+  
+ 			 // Mapeo de índices a IDs de sección
+  			const sectionIds = ['sobremi', 'quese', 'proyectos', 'contacto'];
+  
+			navLinks.forEach((link, index) => {
+				link.addEventListener('click', (e) => {
+				e.preventDefault();
+				
+				// Usamos el mapeo por índice en lugar de obtener el href
+				const targetId = sectionIds[index];
+				const targetElement = document.getElementById(targetId);
+				
+				if (targetElement) {
+					window.scrollTo({
+					top: targetElement.offsetTop,
+					behavior: 'smooth'
+					});
+				}
+				});
+			});
+			});
+		</script>
 	</head>
-	<body>
+
+
+	<body class="flex flex-col  items-center --color-shamrock-900: bg-[#61cc95]"> 
 		<slot />
 	</body>
 </html>
@@ -15,8 +48,6 @@
 <style>
 	html,
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		font-family: 'Josefin Sans Variable', sans-serif;
 	}
 </style>

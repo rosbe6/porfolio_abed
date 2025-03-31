@@ -1,0 +1,12 @@
+--color-shamrock-50: #eefbf3;
+--color-shamrock-100: #d5f6e0;
+--color-shamrock-200: #afebc6;
+--color-shamrock-300: #7adba6;
+--color-shamrock-400: #61cc95;
+--color-shamrock-500: #21a867;
+--color-shamrock-600: #148752;
+--color-shamrock-700: #106c44;
+--color-shamrock-800: #0f5637;
+--color-shamrock-900: #0d472f;
+--color-shamrock-950: #06281b;
+
